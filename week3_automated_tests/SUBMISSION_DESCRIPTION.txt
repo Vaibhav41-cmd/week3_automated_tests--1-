@@ -1,0 +1,21 @@
+PASTE THE TEXT BELOW INTO THE "Write description for the report" BOX (340+ words)
+================================================================================
+
+This report presents my Week 3 deliverable for the Junior Python Developer internship, which is devoted to writing automated tests for Python applications using test-driven development. For this task I designed and built financekit, a moderately complex, dependency-free personal-finance mathematics library covering simple and compound interest, present and future value, loan EMI calculation with full amortization schedules, investment appraisal through NPV, IRR, CAGR and monthly SIP projections, return statistics such as volatility, Sharpe ratio, maximum drawdown and correlation, plus CSV input and output and integrated loan and investment reports.
+
+The project was developed strictly test-first. I began by writing 118 test items from the specification against a skeleton package of stubs and recorded the RED phase in which 117 tests failed, proving the tests genuinely demanded behaviour that did not yet exist. I then implemented the library submodule by submodule until the entire suite passed in the GREEN phase, without modifying a single test to accommodate the code. A coverage-driven cycle then used branch-coverage analysis to identify unexercised behaviour, such as IRR values above one hundred percent and structurally malformed CSV files, adding eleven further tests and raising branch coverage from ninety-four to ninety-eight percent. Finally, I refactored the internals by centralising input validation, unifying money rounding and eliminating a duplicated schedule computation, with the untouched green suite guaranteeing that behaviour was preserved.
+
+The finished suite comprises 129 test items generated from 53 test functions and applies a deliberate mix of techniques: hand-computed known-answer oracles, extensive parametrization, property and invariant tests such as present-value round-trips and amortization sums, shared pytest fixtures, boundary and error-condition tests for every public function, and integration tests that exercise real files through pytest's tmp_path. Sensitivity was verified with manual mutation spot-checks, all three of which the suite correctly killed.
+
+The submission includes the financekit package, the complete test suite, a test documentation file explaining what every test covers and why it was chosen, a TDD process record with captured RED, GREEN, REFACTOR and coverage evidence, a runnable demo with sample data, and clear instructions for executing everything in a clean Python environment.
+
+To make the work directly auditable, the report and repository also include nine figures rendered from real test, coverage, marker, mutation and demo executions; substantial exact source and test listings; worked hand calculations; a requirement-to-code-to-test-to-output traceability matrix; a phase-by-phase work log; and raw terminal transcripts that preserve the evidence behind every headline result.
+
+================================================================================
+Also fill these fields on the form:
+  * Upload your report file  ->  Week3_Automated_Tests_Report.docx
+  * GitHub project URL       ->  push the week3_automated_tests folder to GitHub
+                                 (compulsory for technical internships -
+                                 without it your certificate will not be issued)
+  * Test framework note      ->  pip install -r requirements-dev.txt, then:
+                                 python -m pytest

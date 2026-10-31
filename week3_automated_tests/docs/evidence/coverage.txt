@@ -1,0 +1,21 @@
+$ python -m pytest --cov=financekit --cov-branch --cov-report=term-missing -o addopts= -q
+........................................................................ [ 55%]
+.........................................................                [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.16-final-0 _______________
+
+Name                        Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------
+financekit/__init__.py         10      0      0      0   100%
+financekit/errors.py            2      0      0      0   100%
+financekit/interest.py         34      0      0      0   100%
+financekit/investments.py      53      3     20      3    92%   53, 55, 68
+financekit/io.py               41      0     12      0   100%
+financekit/loans.py            46      0      6      0   100%
+financekit/reports.py          30      0      4      0   100%
+financekit/statistics.py       52      0     14      0   100%
+financekit/validation.py       42      0     18      0   100%
+-----------------------------------------------------------------------
+TOTAL                         310      3     74      3    98%
+129 passed in 0.29s
+[exit_code=0]

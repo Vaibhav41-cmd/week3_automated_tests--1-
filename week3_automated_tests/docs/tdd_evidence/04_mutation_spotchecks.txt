@@ -1,0 +1,9 @@
+Mutation spot-checks (performed on a THROWAWAY copy in /tmp/mut)
+Each mutation must FAIL tests; a surviving mutant would expose a weak suite.
+
+Baseline (unmutated): 75 passed in 0.08s
+MUT1 SIP changed to annuity-due: 4 failed, 28 passed in 0.03s
+MUT2 sample variance uses n not n-1: 2 failed, 23 passed in 0.03s
+MUT3 final-instalment rounding dropped: 4 failed, 28 passed in 0.04s
+
+Result: all 3 mutants killed. The submitted project was never modified.

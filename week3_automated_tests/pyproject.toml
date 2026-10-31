@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financekit"
+version = "1.0.0"
+description = "A small, dependency-free personal-finance mathematics library (Week 3 TDD exercise)"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[tool.setuptools]
+packages = ["financekit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+    "unit: isolated single-function tests",
+    "integration: tests that combine multiple modules or real file I/O",
+    "edge: boundary and error-condition tests",
+]
+
+[tool.coverage.run]
+source = ["financekit"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

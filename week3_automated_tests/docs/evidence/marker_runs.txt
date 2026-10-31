@@ -1,0 +1,15 @@
+$ python -m pytest -m unit -o addopts= -q
+........................................................................ [ 69%]
+................................                                         [100%]
+104 passed, 25 deselected in 0.09s
+[exit_code=0]
+
+$ python -m pytest -m integration -o addopts= -q
+..............                                                           [100%]
+14 passed, 115 deselected in 0.05s
+[exit_code=0]
+
+$ python -m pytest -m edge -o addopts= -q
+..........................................................               [100%]
+58 passed, 71 deselected in 0.07s
+[exit_code=0]
